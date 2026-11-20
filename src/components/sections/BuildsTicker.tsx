@@ -1,11 +1,9 @@
 import { builds } from "@/data/features";
-import Link from "next/link";
-import { FadeUp } from "../animations/AnimationComponents";
 import Typo from "../ui/Typo";
 
 export default function BuildsTicker() {
   return (
-    <section className="py-16 overflow-hidden">
+    <section className="py-10 overflow-hidden">
       <div className="relative flex overflow-hidden">
         <div className="marquee-inner">
           {[...builds, ...builds].map((build, i) => (

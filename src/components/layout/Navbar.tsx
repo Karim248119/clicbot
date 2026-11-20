@@ -48,12 +48,12 @@ export default function Navbar() {
               className="w-auto h-12"
             />
           </Link>
-          <div className="fixed right-8 flex items-center gap-2 z-50">
+          <div className="fixed right-8 flex flexr items-center gap-2 z-50">
             <Link href="/pricing" className=" text-sm">
-              <Button variant="2" text="Pricing" className="text-sm" />
+              <Button variant="1" text="Pricing" className="text-sm" />
             </Link>
             <Button
-              variant="1"
+              variant="2"
               text="menu"
               icon={menuOpen ? <CgClose /> : <CgMenu />}
               onClick={() => setMenuOpen(!menuOpen)}
@@ -66,11 +66,11 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ clipPath: "inset(0 0 100% 0)" }}
-            animate={{ clipPath: "inset(0 0 0% 0)" }}
-            exit={{ clipPath: "inset(0 0 100% 0)" }}
+            initial={{ clipPath: "inset(0 0 0 100%)" }}
+            animate={{ clipPath: "inset(0 0 0 0)" }}
+            exit={{ clipPath: "inset(0 0 0 100%)" }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-clicbot-white px-6 flex flex-col"
+            className="fixed right-0 top-0 w-1/3 pt-25 h-full z-40 bg-clicbot-black text-white px-6 flex flex-col"
           >
             <nav className="flex flex-col gap-2 pt-8">
               {navLinks.map((link, i) => (
@@ -98,7 +98,7 @@ export default function Navbar() {
                     }}
                   >
                     <Typo className="text-clicbot-accent">00{i + 1}.</Typo>
-                    <Typo tag="h1" className="text-8xl text-clicbot-black">
+                    <Typo tag="h1" className="text-xl">
                       {link.label}
                     </Typo>
                   </Link>

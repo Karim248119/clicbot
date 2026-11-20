@@ -1,53 +1,49 @@
 "use client";
 import { JSX, useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
-import { useGLTF, Environment } from "@react-three/drei";
+import { useGLTF, Environment, ContactShadows } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { EffectComposer, Bloom } from "@react-three/postprocessing"; // 1. Import postprocessing
 import * as THREE from "three";
 
 export default function Robot() {
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative w-full h-screen bg-clicbot-white">
       <Canvas
         shadows
         camera={{ position: [0, 0, 5], fov: 45 }}
         gl={{ alpha: true }}
         style={{ background: "transparent" }}
       >
-        <ambientLight intensity={0.8} color="#ffffff" />
+        <ambientLight intensity={1} color="#fff" />
         <directionalLight
           position={[5, 8, 5]}
-          intensity={1.4}
+          intensity={1.5}
           castShadow
           shadow-mapSize={[2048, 2048]}
           color="#ffffff"
         />
-        <directionalLight
-          position={[-4, 2, -3]}
-          intensity={0.1}
-          color="#ddeeff"
-        />
-        <Environment preset="studio" environmentIntensity={0.4} />
-        {/* <ContactShadows
+
+        <Environment preset="studio" environmentIntensity={0.5} />
+        <ContactShadows
           position={[0, -1.6, 0]}
           opacity={0.25}
           scale={6}
           blur={2.5}
           far={4}
           color="#aaaaaa"
-        /> */}
+        />
         <Model />
 
         {/* 2. Add EffectComposer with Bloom */}
-        <EffectComposer>
+        {/* <EffectComposer>
           <Bloom
             intensity={0.012} // Strength of the glow (adjust as needed)
             luminanceThreshold={20} // How bright a surface needs to be to start glowing
             luminanceSmoothing={0.05} // Smooth transition for the bloom
             mipmapBlur
           />
-        </EffectComposer>
+        </EffectComposer> */}
       </Canvas>
     </div>
   );
@@ -111,12 +107,13 @@ function Model(): JSX.Element {
     );
   });
 
+  const scale = 1.3;
   return (
     <primitive
       ref={modelRef}
       object={scene}
-      scale={1}
-      position={[0, -0.4, 0]}
+      scale={scale}
+      position={[0, -scale, 0]}
       rotation={[0, 0, 0]}
     />
   );

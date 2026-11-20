@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FadeUp } from "../animations/AnimationComponents";
 import { featuresFaqs } from "@/data/features";

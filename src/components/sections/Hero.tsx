@@ -9,7 +9,9 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div className="w-full h-screen">
-      <Robot />
+      <div className="absolute inset-0 w-full h-screen">
+        <Robot />
+      </div>
       <Typo
         className="absolute top-1/2 left-1/2 -translate-y-[80%] -translate-1/2 uppercase text-9xl tracking-widest flex gap-96 pointer-events-none"
         font="f1"
@@ -17,7 +19,7 @@ export default function Hero() {
         <span className="text-clicbot-accent">Clic</span>
         <span>Bot</span>
       </Typo>
-      <ScrollCue />
+      {/* <ScrollCue /> */}
       <div className="bottom-8 left-8 absolute">
         <Image
           src="/imgs/code.png"
