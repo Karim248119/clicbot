@@ -1,13 +1,12 @@
 import { tabContent, tabs, Tab } from "@/data/features";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import React, { useState } from "react";
 import Typo from "../ui/Typo";
 
 export default function TabSection() {
   const [activeTab, setActiveTab] = useState<Tab>("Modularity");
   return (
-    <section className="py-16 bg-clicbot-white">
+    <section id="features" className="py-16 bg-clicbot-white">
       <div className="max-w-350 mx-auto px-6 lg:px-12">
         <div className="flex gap-5 mb-5">
           {tabs.map((tab) => (

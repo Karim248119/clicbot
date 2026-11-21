@@ -9,10 +9,11 @@ import Image from "next/image";
 import Typo from "../ui/Typo";
 
 const navLinks = [
-  { href: "/#", label: "Home" },
-  { href: "/features/#", label: "Features" },
-  { href: "/pricing/#", label: "Pricing" },
-  { href: "/blog/#", label: "Blog" },
+  { href: "/#index", label: "Index" },
+  { href: "/#features", label: "Features" },
+  { href: "/#kits", label: "Kits" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#testimonials", label: "Testimonials" },
 ];
 
 const socialLinks = [

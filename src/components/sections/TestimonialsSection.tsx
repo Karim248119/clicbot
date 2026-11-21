@@ -61,7 +61,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 lg: md:py-32  overflow-hidden">
+    <section id="testimonials" className="py-24 lg: md:py-32  overflow-hidden">
       <div className="max-w-350 mx-auto px-6 lg: md:px-12">
         {/* Header */}
         <FadeUp>

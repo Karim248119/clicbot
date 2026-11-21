@@ -89,6 +89,7 @@ export default function ShowcaseSection() {
 
   return (
     <section
+      id="kits"
       ref={sectionRef}
       className="relative overflow-hidden h-screen bg-clicbot-white"
     >

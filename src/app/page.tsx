@@ -12,7 +12,7 @@ import TabSection from "@/components/sections/TabSection";
 
 export default function HomePage() {
   return (
-    <div className="bg-clicbot-white">
+    <div id="index" className="bg-clicbot-white">
       <Hero />
       <FeaturesOverview />
       <StatsSection />

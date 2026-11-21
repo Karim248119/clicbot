@@ -2,13 +2,12 @@
 import { vids } from "@/lib/vids";
 import Robot from "../3d/Robot";
 import Typo from "../ui/Typo";
-import ScrollCue from "./ScrollCue";
 import VideoPlayer from "../ui/video/VideoPlayer";
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="w-full h-screen">
+    <div id="index" className="w-full h-screen">
       <div className="absolute inset-0 w-full h-screen">
         <Robot />
       </div>

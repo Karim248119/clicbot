@@ -9,7 +9,7 @@ import { Plus } from "lucide-react";
 export default function FAQSection() {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
   return (
-    <section className="py-24 bg-clicbot-white">
+    <section id="faq" className="py-24 bg-clicbot-white">
       <div className="max-w-350 mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <FadeUp>

@@ -324,3 +324,8 @@ hr.fancy {
 .card-wrapper:hover .card-number {
   transform: translateY(-4px);
 }
+
+/*smooth scroll*/
+html {
+  scroll-behavior: smooth;
+}
